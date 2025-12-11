@@ -178,38 +178,6 @@ jobs:
           echo "KEYS_AVB_BASE64=${{ secrets.AVB_KEY }}" >> $GITHUB_ENV
           echo "KEYS_CERT_OTA_BASE64=${{ secrets.CERT_OTA }}" >> $GITHUB_ENV
           echo "KEYS_OTA_BASE64=${{ secrets.OTA_KEY }}" >> $GITHUB_ENV
-
-      - name: Validate required secrets
-  shell: bash
-  run: |
-    missing=false
-
-    if [[ -z "${{ secrets.AVB_KEY }}" ]]; then
-      echo "::error::Missing secret: AVB_KEY"
-      missing=true
-    fi
-    if [[ -z "${{ secrets.CERT_OTA }}" ]]; then
-      echo "::error::Missing secret: CERT_OTA"
-      missing=true
-    fi
-    if [[ -z "${{ secrets.OTA_KEY }}" ]]; then
-      echo "::error::Missing secret: OTA_KEY"
-      missing=true
-    fi
-    if [[ -z "${{ secrets.PASSPHRASE_AVB }}" ]]; then
-      echo "::error::Missing secret: PASSPHRASE_AVB"
-      missing=true
-    fi
-    if [[ -z "${{ secrets.PASSPHRASE_OTA }}" ]]; then
-      echo "::error::Missing secret: PASSPHRASE_OTA"
-      missing=true
-    fi
-
-    if [[ "$missing" == "true" ]]; then
-      echo "::error::One or more required secrets are not set. Aborting."
-      exit 1
-    fi
-
       - name: Patch OTA
         shell: bash
         env:
