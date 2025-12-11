@@ -23,7 +23,7 @@ WORKDIR=".tmp"
 # GitHub variables
 DOMAIN="https://github.com"
 REPOSITORY="PixeneOS" # GitHub repository name
-USER="pixincreate"    # GitHub username
+USER="chemchetchagio"    # GitHub username
 
 # Application version variables
 VERSION[AFSR]="${VERSION[AFSR]:-1.0.4}"
@@ -35,7 +35,7 @@ VERSION[CUSTOTA]="${VERSION[CUSTOTA]:-5.19}"
 VERSION[GRAPHENEOS]="${VERSION[GRAPHENEOS]:-}"
 VERSION[MAGISK]="${VERSION[MAGISK]:-}"
 VERSION[MSD]="${VERSION[MSD]:-1.20}"
-VERSION[OEMUNLOCKONBOOT]="${VERSION[OEMUNLOCKONBOOT]:-1.3}"
+# VERSION[OEMUNLOCKONBOOT]="${VERSION[OEMUNLOCKONBOOT]:-1.3}"
 
 # Magisk
 MAGISK[PREINIT]="${MAGISK_PREINIT:-}"
@@ -66,7 +66,7 @@ ADDITIONALS[ALTERINSTALLER]="${ADDITIONALS[ALTERINSTALLER]:-true}"   # Spoof And
 ADDITIONALS[BCR]="${ADDITIONALS[BCR]:-true}"                         # Basic Call Recorder
 ADDITIONALS[CUSTOTA]="${ADDITIONALS[CUSTOTA]:-true}"                 # Custom OTA Updater app
 ADDITIONALS[MSD]="${ADDITIONALS[MSD]:-true}"                         # Mass Storage Device on USB
-ADDITIONALS[OEMUNLOCKONBOOT]="${ADDITIONALS[OEMUNLOCKONBOOT]:-true}" # toggle OEM unlock button on boot
+# ADDITIONALS[OEMUNLOCKONBOOT]="${ADDITIONALS[OEMUNLOCKONBOOT]:-true}" # toggle OEM unlock button on boot
 # Tools
 ADDITIONALS[AVBROOT]="${ADDITIONALS[AVBROOT]:-true}"                   # Android Verified Boot Root
 ADDITIONALS[CUSTOTA_TOOL]="${ADDITIONALS[CUSTOTA_TOOL]:-true}"         # Custom OTA Tool
